@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2.page-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .my-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+    }
+
+    .item h1 {
+      font-size: 1.4rem;
+      text-align: center;
+      color: #000;
+      font-weight: bold;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .item h1::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 4px;
+      margin: 10px auto 0;
+      background: linear-gradient(to right, orange, purple, blue);
+      border-radius: 10px;
+    }
+
+    .item p,
+    .item ul,
+    .item ol,
+    .item mark,
+    .item table {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .item ul,
+    .item ol {
+      margin-left: 20px;
+    }
+
+    mark {
+      background-color: #ffeaa7;
+      padding: 2px 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      .item {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">
+      <h1>CSS</h1>
+      <p>CSS-Cascading Style Sheet</p>
+      <p>It Is Used to Design Web Pages</p>
+      <h2>🔹CSS Syntax</h2>
+      <p>Selector: Targets the HTML element.<br>
+        Declaration block: Contains one or more declarations.</p>
+
+      <p>📌Syntax:-css<br>
+        selector {<br>
+        property: value;<br>
+        }</p>
+      <p>Ex:--!DOCTYPE html><br>
+        html lang="en"><br>
+        /html><br>
+      <h2>🔹Types of CSS</h2>
+      <ul>
+        <li>Inline CSS: Inside HTML tags via style attribute.</li>
+        <li>Internal CSS: Inside style> tag in the head>..</li>
+        <li>External CSS: Linked via link> tag to a .css file..</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h1>CSS written inside style tag</h1>
+      <p>CSS is used to style and design HTML web pages. Here are the main uses.</p>
+      <p>CSS separates the content (HTML) from the presentation (styling)..</p>
+      <p>EX:--!DOCTYPE html<br>
+        html lang="en"<br>
+        head<br>
+        meta charset="UTF-8"<br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+        title>Document<br>
+        /head<br>
+        style<br>
+        /style<br>
+        /html<br>
+      </p>
+      <hr>
+      <h2>🔹CSS Selectors</h2>
+      <ul>
+        <li>Basic: p, h1, div</li>
+        <li>Class: .classname</li>
+        <li>ID: #idname</li>
+        <li>Group: h1, p, div</li>
+        <li>Universal: *</li>
+        <li>Combinators: div > p, div + p, div ~ p</li>
+      </ul>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Design Layouts.</h1>
+      <p>Controls page structure (grid, flexbox, etc.)
+      <ul>
+        <li>Grid</li>
+        <li>Flexbox</li>
+        <li>Spacing</li>
+        <li>Alignment</li>
+        <li>Positioning</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html<br>
+        html lang="en"<br>
+        head<br>
+        meta charset="UTF-8"<br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+        title<br>
+        style<br>
+      <p>Flexbox<br> Grid <br> Spacing <br> Alignment <br>Positioning <br> </p>
+      /style<br>
+      /title<br>
+      /head<br>
+      body<br>
+      /body<br>
+      /html<br>
+      </p>
+    </div>
+
+
+    <div class="item">
+      <h1>Change Colors </h1>
+      <p>Change Colors Set text, background, border colors, etc.
+      <ul>
+        <li>Color</li>
+        <li>Background</li>
+        <li>Border</li>
+        <li>Gradient</li>
+        <li>RGBA</li>
+        <li>Hover</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        style<br>
+        .color-box {<br>
+        color: white;<br>
+        background-color: blue;<br>
+        padding: 20px;<br>
+        text-align: center<br>;
+        transition: 0.3s;<br>
+        }<br>
+
+        .color-box:hover {<br>
+        background-color: green;<br>
+        color: yellow;<br>
+        }<br>
+        /style<br>
+        /head<br>
+        body<br>
+        div class="color-box"<br>
+        Hover to Change Color<br>
+        /div<br>
+
+        /body<br>
+        /html<br>
+      </p>
+      <h2>🔹 CSS Properties</h2>
+      <ul>
+        <li>Text: color, font-size, text-align, text-decoration</li>
+        <li>Box Model: margin, border, padding, width, height</li>
+        <li>Background: background-color, background-image, background-size</li>
+        <li>Display: block, inline, inline-block, flex, grid, none</li>
+        <li>Positioning: static, relative, absolute, fixed, sticky</li>
+      </ul>
+      <p>🎨 1. Color<br>
+        p {<br>
+        color: blue;<br>
+        }<br>
+        p>This text is blue./p> <br>
+        🎨 2. Background<br>
+        div {<br>
+        background-color: lightyellow;<br>
+        }<br>
+        div> This has a light yellow background./div><br>
+        🎨 3. Border<br>
+        div {<br>
+        border: 2px solid green;<br>
+        }<br>
+        div> This has a green border. /div>
+      </p>
+    </div>
+
+
+    <div class="item">
+      <h1>Set Fonts</h1>
+      <p> Fonts and colors play a major role in improving readability and enhancing the user experience.
+      <ul>
+        <li>Font-family</li>
+        <li>Font-size</li>
+        <li>Font-style</li>
+        <li>Text-align</li>
+        <li>Color</li>
+        <li>Word-spacing</li>
+      </ul>
+
+      </p>
+      <p>EX:-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        style<br>
+        p {<br>
+        font-family: 'Arial', sans-serif;<br>
+        font-size: 20px;<br>
+        font-weight: 600;<br>
+        font-style: italic;<br>
+        line-height: 1.5;<br>
+        letter-spacing: 1px;<br>
+        color: #2c3e50;<br>
+        text-align: justify<br>;
+        }<br>
+        /style<br>
+        /head<br>
+        body<br>
+      <p>
+        Fonts in CSS help improve the readability and style of a webpage. By adjusting font size, weight, and spacing,
+        you can make content more attractive and easier to read.
+      </p>
+      /body<br>
+      /html<br>
+      </p>
+      <hr>
+      <h2>🔹CSS Box Model</h2>
+      <p>Ex:-- On CSS Box Model</p>
+      <ul>
+        <li>Content → Padding → Border → Margin</li>
+      </ul>
+      <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png" style="width: 100%;">
+    </div>
+
+
+    <div class="item">
+      <h1>Responsive Design </h1>
+      <p>Responsive design ensures that a website adjusts and looks good on all devices, including mobiles, tablets, and
+        desktops.
+
+      <ul>
+        <li>Viewport</li>
+        <li>Media</li>
+        <li>Scalability</li>
+        <li>Percentage</li>
+        <li>Orientation</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        style<br>
+        body {<br>
+        font-family: Arial, sans-serif;<br>
+        margin: 0;<br>
+        padding: 0;<br>
+        }<br>
+
+        .container {<br>
+        padding: 20px;<br>
+        background-color: lightblue;<br>
+        text-align: center;<br>
+        }<br>
+
+        .box {<br>
+        background-color: #3498db;<br>
+        color: white;<br>
+        padding: 20px;<br>
+        margin: 10px;<br>
+        font-size: 24px;<br>
+        }<br>
+
+        /* Responsive: Stack boxes on small screens */<br>
+        @media (max-width: 600px) {<br>
+        .box {<br>
+        font-size: 18px;<br>
+        background-color: #2ecc71;<br>
+        }<br>
+        }<br>
+        /style><br>
+        /head><br>
+        body><br>
+
+        div class="container"<br>
+        div class="box">Responsive Box /div<br>
+      <p>This box changes color and size on smaller screens.</p>
+      /div><br>
+      /body><br>
+      /html><br>
+      <p>
+        Ex:--Shprt Example on Responsive Design<br>
+        style><br>
+        .container {<br>
+        display: flex;<br>
+        flex-wrap: wrap;<br>
+        }<br>
+        .box <br>{
+        flex: 1 1 200px;<br>
+        background: lightblue;<br>
+        margin: 10px;<br>
+        padding: 20px;<br>
+        text-align: center;<br>
+        }<br>
+        /style><br>
+      </p>
+    </div>
+
+
+    <div class="item">
+      <h1> Aniation's</h1>
+      <p>section-- is used to group related content into logical sections of a webpage</p>
+      <p>CSS animations allow developers to create smooth, visually appealing transitions and effects without using
+        JavaScript. By using key properties like `@keyframes`, `animation-name`, and `animation-duration`.
+      </p>
+      <p>elements can be animated to move, fade, scale, or rotate on the webpage. Animations enhance user interaction
+        and make web pages feel more dynamic and engaging, improving overall user experience.</p>
+      <ul>
+        <li>@keyframes</li>
+        <li>Animation-name</li>
+        <li>Duration</li>
+        <li>Transform</li>
+        <li>Transition</li>
+      </ul>
+      <p>EX:-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        style<br>
+        .box {<br>
+        width: 100px;<br>
+        height: 100px;<br>
+        background-color: red;<br>
+        position: relative;<br>
+        animation-name: slide;<br>
+        animation-duration: 3s;<br>
+        animation-iteration-count: infinite;<br>
+        animation-direction: alternate;<br>
+        }<br>
+
+        @keyframes slide {<br>
+        0% {<br>
+        left: 0;<br>
+        background-color: red;<br>
+        }<br>
+        100% {<br>
+        left: 300px;<br>
+        background-color: blue;<br>
+        }<br>
+        }<br>
+        /style<br>
+        /head<br>
+        body<br>
+        div class="box"> <br> /div<br>
+        /body<br>
+        /html<br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Pseudo-classes and Pseudo-elements</h1>
+      <p>Pseudo-classes-in CSS are used to define the special states of an element without adding extra classes or IDs
+        in HTML. They allow styling based on user interaction or element position. For example, `:hover` applies styles
+        when a user points to an element with a mouse, `:focus` applies styles when an element like an input box is
+        active.
+      </p>
+      <p>Pseudo-elements-in CSS are used to style specific parts of an element or insert content without changing the
+        HTML. Common pseudo-elements include `::before` and `::after`, which allow you to add decorative content before
+        or after an element’s actual content. Others like `::first-letter` or `::first-line` target specific portions of
+        text.
+      </p>
+      <ul>
+        <li>Hover</li>
+        <li>Focus</li>
+        <li>Visited</li>
+        <li>Active</li>
+        <li>Disabled</li>
+      </ul>
+
+      <ul>
+        <li>Before</li>
+        <li>After</li>
+        <li>First-letter</li>
+        <li>First-line</li>
+        <li>Selection</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        style<br>
+        /* Pseudo-class: hover */<br>
+        button:hover {<br>
+        background-color: lightgreen;<br>
+        cursor: pointer;<br>
+        }<br>
+
+        /* Pseudo-element: before */<br>
+        p::before {<br>
+        content: "👉 ";<br>
+        color: red;<br>
+        }<br>
+        /style<br>
+        /head<br>
+        body<br>
+
+        button Click Me /button
+      <p>This is a paragraph.</p>
+      /body<br>
+      /html<br>
+      </p>
+    </div>
+
+
+    <div class="item">
+      <h1>Flex & Grid</h1>
+      <p>Flex-- Flexbox (short for Flexible Box Layout) is a one-dimensional layout model in CSS used to arrange
+        elements in a row or column, making it easy to:</p>
+      <ul>
+        <li>Align items</li>
+        <li>Distribute space</li>
+        <li>Handle responsive designs</li>
+        <li>Reorder elements</li>
+      </ul>
+      <p>
+        🛠️ Syntax:--Flex<br>
+        .container {<br>
+        display: flex;<br>
+        }<br>
+      </p>
+      <p>EX-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        title flex /title<br>
+        /head<br>
+        body<br>
+
+        div class="flex-container"<br>
+        div class="flex-item">Box 1 div<br>
+        div class="flex-item">Box 2 div<br>
+        div class="flex-item">Box 3 div<br>
+        /div<br>
+
+        /body<br>
+        /html<br>
+      </p>
+      <table style="width:100%">
+        <tr>
+          <th>Use Case</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td> Horizontal/vertical layouts</td>
+          <td>Easily arrange items in rows or columns</td>
+        </tr>
+        <tr>
+          <td>Centering elements</td>
+          <td>Align content vertically and horizontally</td>
+        </tr>
+        <tr>
+          <td>Responsive spacing </td>
+          <td>Dynamically distribute space between items</td>
+        </tr>
+        <tr>
+          <td>Flexible item sizing </td>
+          <td>Items grow or shrink based on available space</td>
+        </tr>
+        <tr>
+          <td>Reordering items </td>
+          <td>Change the visual order using order property</td>
+        </tr>
+        <tr>
+          <td>Centering elements</td>
+          <td>Align content vertically and horizontally</td>
+        </tr>
+      </table>
+      <p> Ex:-- On Flex<br>
+        display: flex;<br>
+        flex-direction: row | column;<br>
+        justify-content: flex-start | center | space-between;<br>
+        align-items: stretch | center | flex-end;<br>
+        gap: 10px;<br>
+      </p>
+    </div>
+
+
+
+
+
+    <div class="item">
+      <h1>Grid</h1>
+      <p>Grid-- CSS Grid Layout is a two-dimensional layout system in CSS that allows you to design web pages by
+        organizing content into rows and columns.</p>
+      <ul>
+        <li>Align items</li>
+        <li>Distribute space</li>
+        <li>Handle responsive designs</li>
+        <li>Reorder elements</li>
+      </ul>
+      <p>
+        🛠️ Syntax:--Grid<br>
+        .container {<br>
+        display: grid;<br>
+        grid-template-columns: repeat(3, 1fr);<br>
+        grid-gap: 20px;<br>
+        }<br>
+      </p>
+      <p>EX-- !DOCTYPE html<br>
+        html<br>
+        head<br>
+        title flex /title<br>
+        /head<br>
+        body<br>
+
+        div class="flex-container"<br>
+        div class="flex-item">Box 1 div<br>
+        div class="flex-item">Box 2 div<br>
+        div class="flex-item">Box 3 div<br>
+        /div<br>
+
+        /body<br>
+        /html<br>
+      </p>
+      <table style="width:100%">
+        <tr>
+          <th>Use Case</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Complex page layouts </td>
+          <td>Create dashboards, galleries, forms</td>
+        </tr>
+        <tr>
+          <td>Rows + Columns</td>
+          <td>Layouts with both horizontal and vertical structure</td>
+        </tr>
+        <tr>
+          <td>Grid-based design</td>
+          <td>Align multiple sections in a clean format</td>
+        </tr>
+        <tr>
+          <td>Template areas</td>
+          <td>Name and place grid sections using grid-area</td>
+        </tr>
+        <tr>
+          <td>Responsivenes</td>
+          <td>Easily adjust layout with media queries</td>
+        </tr>
+      </table>
+      <p> Ex:-- On Grid<br>
+        display: grid;<br>
+        grid-template-columns: repeat(3, 1fr);<br>
+        grid-template-rows: auto;<br>
+        gap: 10px;<br>
+        justify-items: center;<br>
+        align-items: start;<br>
+      </p>
+    </div>
+
+
+
+
+
+
+    <div class="item">
+      <h1> CSS Selectors</h1>
+      <p>CSS Properties are rules used to style and control the appearance, layout, behavior, and position of HTML
+        elements on a webpage.</p>
+      <ul>
+        <li>Universal Selector: *</li>
+
+        <li>Element Selector: p, h1, div</li>
+
+        <li>Class Selector: .classname</li>
+
+        <li>ID Selector: #idname</li>
+
+        <li>Group Selector: h1, p, div</li>
+
+        <li>Attribute Selector: input[type="text"]</li>
+
+        <li>Combinators: div > p, div + p, div ~ p</li>
+      </ul>
+
+
+
+      <h2>Ex:--On All CSS Selectors</h2>
+      <h4>🔹 Universal Selector (*)</h4>
+      <p>Selects all elements on the page.</p>
+      * {<br>
+      margin: 0;<br>
+      padding: 0;<br>
+      }<br>
+
+
+      <h4>🔹Type Selector (Element selector)</h4>
+      <p>Selects all elements of a specific type.<br>
+        p {<br>
+        color: blue;<br>
+        }
+      </p>
+
+      <h4>🔹 Class Selector (.class)</h4>
+      <p>Selects elements with a specific class.<br>
+        p> class="highlight">Hell
+        .highlight {<br>
+        background: yellow;<br>
+        }
+      </p>
+
+
+      <h4>🔹ID Selector (#id)</h4>
+      <p>Selects an element with a specific ID.<br>
+        h1> id="main-title">Welcome /h1>
+        #main-title {<br>
+        color: red;<br>
+        }
+      </p>
+
+
+      <h4>🔹Grouping Selector (A, B)</h4>
+      <p>Applies the same style to multiple elements.<br>
+        h1, h2, p {<br>
+        font-family: Arial;<br>
+        }
+      </p>
+
+
+      <h4>🔹Attribute Selector</h4>
+      <p>Selects elements based on attributes.<br>
+        input type="text" /><br>
+        input[type="text"] {<br>
+        border: 1px solid blue;<br>
+        }
+      </p>
+    </div>
+
+    <div class="item">
+      <h1>Important Questions on CSS</h1>
+      <h2>1. What does CSS stand for?</h2>
+      <h4>A: CSS stands for "Cascading Style Sheets.<br> <br> Current official version of CSS is:CSS3</h4><br>
+      <h2>2. How do you include an external CSS file in an HTML document?</h2>
+      <h4>A: Use the link> element in the head> section of the HTML document to link
+        the external CSS file.</h4>
+
+      <p>x:--!DOCTYPE html><br>
+        html><br>
+        head><br>
+        link rel="stylesheet" href="styles.css"><br>
+        /head><br>
+        body><br>
+        !-- Content goes here --><br>
+        /body><br>
+        /html><br>
+      </p>
+      <br>
+      <h2>3. How do you set the font color of an element in CSS?</h2>
+      <h4>A: Use the color property to set the font color of an element.</h4>
+      <p>
+        Ex:--p{<br>
+        color: blue;<br>
+        }<br>
+      </p>
+
+      <h2>4. How can you center an element horizontally in CSS?</h2>
+      <h4>A: Use the margin property with auto value to horizontally center an element.</h4>
+      <p>
+        Ex:--div {<br>
+        width: 200px;<br>
+        margin: 0 auto;<br>
+        }<br>
+      </p>
+
+      <h2>5. What is the difference between margin and padding in CSS?</h2>
+      <h4>A: Margin is the space outside the border of an element, while padding is the
+        space inside the border of an element.</h4>
+      <p>Ex:--div {<br>
+        margin: 10px;<br>
+        padding: 10px;<br>
+        }<br>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

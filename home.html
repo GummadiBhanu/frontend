@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Topics Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2.page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .my-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item h1 {
+            font-size: 1.4rem;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .item h1::after {
+            content: "";
+            display: block;
+            width: 60%;
+            height: 4px;
+            margin: 10px auto 0;
+            background: linear-gradient(to right, orange, purple, blue);
+            border-radius: 10px;
+        }
+
+        .item p,
+        .item ul,
+        .item ol,
+        .item mark,
+        .item table {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .item ul,
+        .item ol {
+            margin-left: 20px;
+        }
+
+        mark {
+            background-color: #ffeaa7;
+            padding: 2px 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+         @media (max-width: 600px) {
+      .item {
+        padding: 15px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <h2 class="page-title">HTML Topics Overview</h2>
+    <div class="my-container">
+        <div class="item">
+            <h1>HTML</h1>
+            <p>HTML-Hyper Text Markup Language.<br>
+                It Is Used to Design Web Pages.<br>
+                The !DOCTYPE> declaration is not case sensitive.<br>
+                The !DOCTYPE> declaration for HTML5 is:</p>
+            <p>EX:--!DOCTYPE html<br>
+                html lang="en"<br>
+                head><br>
+                title><br>
+                /title><br>
+                /head<br>
+                body<br>
+                /body<br>
+                /html<br>
+                <hr>
+
+            <h1>HTML Elements</h1>
+            <table style="width:100%">
+                <tr>
+                    <th>Start Tag</th>
+                    <th>Element Content</th>
+                    <th>End Tag</th>
+                </tr>
+                <tr>
+                    <td> h1></td>
+                    <td>My First Heading</td>
+                    <td>/h1></td>
+                </tr>
+                <tr>
+                    <td> P></td>
+                    <td>My Paragraph</td>
+                    <td>/p></td>
+                <tr>
+                    <td> br></td>
+                    <td>None</td>
+                    <td>None</td>
+            </table>
+
+
+        </div>
+
+        <div class="item">
+            <h1>Head & Title</h1>
+            <p>Head-is used to define metadata and links for the HTML document.</p>
+            <p>Title-sets the text that appears in the browser tab and represents the page title.</p>
+            <p>EX:--!DOCTYPE html<br>
+                html lang="en"<br>
+                head<br>
+                meta charset="UTF-8"<br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+                title> Title of the page written here
+                /title><br>
+                /head><br>
+                /html><br>
+            </p>
+            <hr>
+            <h1>Header </h1>
+            <p>Key Uses of header>:Top Section of a Page
+                Usually contains the site logo, title, and main navigation.
+
+                Introductory Content for a Section
+
+                Can be used inside article>, section>, or aside> to introduce that part of the page.
+
+                Not Just for the Entire Page
+
+                Can appear multiple times in one document (once per section or article).</p>
+        </div>
+
+
+
+        <div class="item">
+            <h1>Body-Main Program</h1>
+            <p>Body-contains all the visible content of a web page, such as
+            <ul>
+                <li>Text</li>
+                <li>Links</li>
+                <li>Images</li>
+                <li>Headings</li>
+                <li>Paragraphs</li>
+                <li>Buttons</li>
+            </ul>
+            </p>
+            <p>EX:-- !DOCTYPE html<br>
+                html lang="en"<br>
+                head<br>
+                meta charset="UTF-8"<br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+                title>
+                /title><br>
+                /head><br>
+                <mark>body> Main Program can be weitten here /body> </mark><br>
+                /html><br>
+            </p>
+            <hr>
+            <h1>Mark & Span</h1>
+            <p>Mark-It is used to define a word with yellow background and red text.</p>
+            <p>Span-is a generic inline container used to group text or elements for styling with CSS or scripting with
+                JavaScript. It does not apply any styling by default..</p>
+        </div>
+
+
+        <div class="item">
+            <h1>Headings</h1>
+            <p>Heading- it represents six type of headings and in bold format such as
+            <ul>
+                <li>h1-Main heading and big in size compare to others</li>
+                <li>h2- small in size compare to h1</li>
+                <li>h3- small in size compare to h1 &h2</li>
+                <li>h4- medium in size</li>
+                <li>h5- small in size</li>
+                <li>h6- very small </li>
+            </ul>
+            </p>
+            <p>EX:-- !DOCTYPE html<br>
+                html lang="en"<br>
+                head<br>
+                meta charset="UTF-8"<br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+                title
+                /title<br>
+                /head<br>
+                body<br>
+                h1>---/h1><br>
+                h2>---/h2><br>
+                h3>---/h3><br>
+                h4>---/h><br>
+                h5>---/h5><br>
+                h6>---/h6><br>
+
+                <mark>h1> to h6> Headings Can be witten here by size recuirement </mark><br>
+                /body<br>
+                /html<br>
+            </p>
+            <hr>
+            <p>EX:--On Heading Tags</p>
+            <h1>h1--Heading</h1>
+            <h2>h2--Heading</h2>
+            <h3>h3--Heading</h3>
+            <h4>h4--Heading</h4>
+            <h5>h5--Heading</h5>
+            <h6>h6--Heading</h6>
+        </div>
+
+
+        <div class="item">
+            <h1>Paragraphs</h1>
+            <p>Heading- it represents six type of headings and in bold format such as
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias fugiat dicta ipsam numquam nostrum
+                molestiae! Sed quasi modi vitae adipisci placeat hic explicabo vel corporis, nesciunt tempore
+                accusantium, obcaecati ratione?</p>
+            </p>
+            <p>EX:-- !DOCTYPE html><br>
+                html lang="en"><br>
+                head><br>
+                meta charset="UTF-8"><br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+                title>
+                /title><br>
+                /head><br>
+                body><br>
+                h1 to h6><br>
+                <mark>p> A paragraph always starts on a new line, and is usually a block of text. /p> </mark><br>
+                /body><br>
+                /html><br>
+            </p>
+            <hr>
+            <p>EX:--Paragraph Tags</p>
+            <p>For Default Para Type LOREM (Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sunt quaerat
+                omnis? Sit cumque magnam quod perferendis doloribus fugit quas veritatis id, debitis harum a quo quidem
+                rerum ipsa molestias).</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque impedit aliquid aperiam facere, dicta ut,
+                asperiores adipisci corrupti consectetur dolor sequi nam beatae soluta. Expedita delectus corporis
+                ratione eveniet hic.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, unde minima amet cum ab quo,
+                laudantium reprehenderit libero obcaecati aliquid nisi et. Culpa in maiores soluta voluptatem molestias
+                non voluptates?</p>
+        </div>
+
+
+        <div class="item">
+            <h1>Images, Audio & Video</h1>
+            <p>Images-- it is used to display images and gif's
+            <p>Audio-- it is used to play songs which are in mp3 model</p>
+            <p>Video-- it is used to play video's which are in mp4 & youtube links also supported </p>
+            <ul>
+                <li>Images-- img src="naresh it.png" alt="img"</li>
+                <li>Audio-- source src="audio.mp3" type="audio/mpeg"</li>
+                <li>Video-- src="video.mp4" type="video/mp4"</li>
+            </ul>
+            </p>
+            <p>EX:-- !DOCTYPE html><br>
+                html lang="en"><br>
+                head><br>
+                meta charset="UTF-8"><br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+                title>
+                /title><br>
+                /head><br>
+                body><br>
+                h1 to h6-- used for headings><br>
+                p-- used to disolay para> <br>
+                images, audio, video-- used to diplay img,audio,video<br>
+                <mark>img src=".png,.jpg, .jpeg, .web, .............."</mark><br>
+                <mark>source src="song.mp3" type="audio, mpeg,......."</mark><br>
+                <mark>source src="movie.mp4" type="video/mp4,........"></mark><br>
+                /body><br>
+                /html><br>
+            </p>
+            <hr>
+            <p>EX:--On Image Tag</p>
+            <img src="https://wallpapercave.com/wp/wp12011123.jpg">
+        </div>
+
+
+        <div class="item">
+            <h1>Section, Div& Anchor</h1>
+            <p>section-- is used to group related content into logical sections of a webpage</p>
+            <p>Div-- is a generic container used to group elements for styling or scripting purposes.</p>
+            <p>Anchor-- creates hyperlinks to navigate to other pages, sections, or websites.</p>
+            </p>
+            <p>EX:-- !DOCTYPE html><br>
+                html lang="en"><br>
+                head><br>
+                meta charset="UTF-8"><br>
+                title Section, Div & Anchor Example<br>
+                head><br>
+                body><br>
+
+                section<br>
+                h2 About Us /h2><br>
+                div class="box"><br>
+                We are a team of passionate web developers<br> building beautiful websites<br>
+                a href="https://example.com" target="_blank">Visit <br>our main site<br>
+                div><br>
+                /section><br>
+                /body><br>
+                /html><br>
+            </p>
+            <hr>
+            <h1>Inline Text Formatting Tags</h1>
+            <table style="width:100%;">
+                <tr>
+                    <th>Start Tag</th>
+                    <th>Element Content</th>
+                    <th>End Tag</th>
+                </tr>
+                <tr>
+                    <td> a> </td>
+                    <td> Anchor </td>
+                    <td> /a </td>
+                </tr>
+
+                <tr>
+                    <td>strong> (or) b-Bold</td>
+                    <td>BOLD</td>
+                    <td> /strong, /bold</td>
+                </tr>
+                <tr>
+                    <td>em>, (or) i></td>
+                    <td>Italic Format</td>
+                    <td> /em, /i</td>
+                </tr>
+
+                <tr>
+                    <td>sub></td>
+                    <td>Subscript</td>
+                    <td> /sub></td>
+                </tr>
+
+                <tr>
+                    <td> sup></td>
+                    <td>Superscript</td>
+                    <td> /sup</td>
+                </tr>
+                <tr>
+                    <td> U></td>
+                    <td>Underline</td>
+                    <td> /U</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div class="item">
+            <h1>Table, Input& Button </h1>
+            <p>Table-- is used to display data in rows and columns format.</p>
+            <p>Input-- is used to create interactive fields where users can enter data in forms.</p>
+            <p>Button-- is used to create a clickable button to submit forms or trigger actions.</p>
+            <ul>
+                <li>Table-- TR-Create Rows, TH-Table Head & TD-Table data "</li>
+                <li>Input-- Input uses to determine the DATE, TIME, TEXT, MONTH, YEAR</li>
+                <li>Button-- it has several types they are BUTTON, SUBMIT RESET, LOGIN SIGN-UP</li>
+            </ul>
+            </p>
+            <p>EX:-- !DOCTYPE html<br>
+                html lang="en"<br>
+                head<br>
+                meta charset="UTF-8"<br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+                title
+                /title<br>
+                /head<br>
+                body<br>
+                h1 to h6-- used for headings<br>
+                p-- used to disolay para <br>
+                images, audio, video-- used to diplay img,audio,video<br>
+                Section, Div& Anchor<br>
+                Table-- tr, td, th.<br>
+                Input-- type=text, date, time, month, year<br>
+            <p> EX:--On Input Types<br>
+                <input type="date"><br>
+                <input type="time"><br>
+                <input type="text" placeholder="enter your name"><br>
+                <input type="email" placeholder="enter your email"><br>
+                <input type="password" placeholder="enter your password"><br>
+                <button>SUBMIT</button><br>
+            </p>
+            Button-- type= submit, reset, log-in,sign-up<br>
+            /body<br>
+            /html<br>
+            </p>
+        </div>
+
+
+        <div class="item">
+            <h1>Flex & Grid</h1>
+            <p>Flex-- is used to create one-dimensional layouts, aligning items horizontally or vertically within a
+                container..</p>
+            <p>Grid-- is used to create two-dimensional layouts, organizing content in rows and columns..</p>
+            <ul>
+                <li>Flex-- row or column (great for navbars, menus)."</li>
+                <li>Grid-- row and column (great for full page or card layouts).</li>
+            </ul>
+            </p>
+            <h1>Flex</h1>
+            <p>EX-- !DOCTYPE html<br>
+                html<br>
+                head<br>
+                title flex /title<br>
+                /head<br>
+                body<br>
+
+                div class="flex-container"<br>
+                div class="flex-item">Box 1 div<br>
+                div class="flex-item">Box 2 div<br>
+                div class="flex-item">Box 3 div<br>
+                /div<br>
+
+                /body<br>
+                /html<br>
+            </p>
+
+            <h1>Grid</h1>
+            <p>EX-- !DOCTYPE html<br>
+                html<br>
+                head<br>
+                title Grid /title<br>
+                /head<br>
+                body<br>
+
+                div class="Grid-container"<br>
+                div class="Grid-item">Box 1 div<br>
+                div class="Grid-item">Box 2 div<br>
+                div class="Grid-item">Box 3 div<br>
+                /div<br>
+
+                /body<br>
+                /html<br>
+            </p>
+        </div>
+
+
+
+
+        <div class="item">
+            <h1>Ol &, Ul</h1>
+            <p>Ol-- is used to display data in rows and columns format.</p>
+            <p>Ul-- is used to create interactive fields where users can enter data in forms.</p>
+            <p>EX:-- Example on un-ordered list</p>
+            <p>.It Indicates in Dots,Squares</p>
+            <ul>
+                <li>Ul-- un ordered List is used to define like a point such as, Dots, Circle, Square"</li>
+                <li>Dots</li>
+                <li>Circle</li>
+                <li>Square</li>
+            </ul>
+            <p>EX:-On Ordered List </p>
+            <p>It Indicates in A,B,C..... 1,2,3,......i,ii,iii,.......a,b,c,..........</p>
+            <ul type="1">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>BS</li>
+            </ul>
+            </p>
+
+
+            <p>EX:--!DOCTYPE html<br>
+                html<br>
+                head<br>
+                title List Example /title<br>
+                /head<br>
+                body<br>
+
+                <h4>Ex:--On Unordered List</h4>
+                <ul>
+                <li> HTML </li>
+                <li> CSS </li>
+                <li>JavaScript </li>
+                </ul>
+
+                <h4>Ex:--On Ordered List</h4>
+                <ol type="1"><br>
+                <li> Learn HTML Basics </li>
+                <li> Understand CSS </li>
+                <li> Practice JavaScript </li>  
+              </ol>
+
+                /body<br>
+                /html <br>
+            </p>
+        </div>
+
+
+
+
+        <div class="item">
+            <h1>Form Elements</h1>
+            <p>Form--Form elements in HTML are used to collect user input. They are placed inside the form> tag and
+                allow users to enter data such as text, email, password, date, etc., which can then be submitted to a
+                server for processing.</p>
+            <ul>
+                <li>form</li>
+                <li>select></li>
+                <li>textarea></li>
+                <li>fieldset</li>
+                <li>legend</li>
+                <li>output></li>
+
+            </ul>
+            </p>
+            <p>EX:-- !DOCTYPE html<br>
+                html lang="en"<br>
+                head<br>
+                meta charset="UTF-8"<br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+                title
+                /title<br>
+                /head<br>
+                body<br>
+                h1 to h6-- used for headings<br>
+                p-- used to disolay para <br>
+                images, audio, video-- used to diplay img,audio,video<br>
+                Section, Div& Anchor<br>
+                Table-- tr, td, th.<br>
+                Input-- type=text, date, time, month, year<br>
+                Button-- type= submit, reset, log-in,sign-up<br>
+                form action="/submit" method="post"><br>
+                /form><br>
+                label for="cars">Choose a car: /label><br>
+                select id="cars" name="cars"><br>
+                option> value="volvo">Volvo /option><br>
+                option> value="audi">Audi /option><br>
+                /select><br>
+                fieldset><br>
+                legend> Personal Details /legend><br>
+                label for="fname">First name: /label><br>
+                input type="text" id="fname" name="fname"><br>
+                output name="result" for="a b"> /output><br>
+                /body<br>
+                /html<br>
+            </p>
+        </div>
+
+
+
+
+
+        <div class="item">
+            <h1>Footer</h1>
+            <p>Footer-- is used to display the message down.</p>
+            <ul>
+                <li>Footer-- TR-Create Rows, TH-Table Head & TD-Table data "</li>
+            </ul>
+            </p>
+            <p>EX:-- !DOCTYPE html<br>
+                html lang="en"<br>
+                head<br>
+                meta charset="UTF-8"<br>
+                meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+                title
+                /title<br>
+                /head<br>
+                body<br>
+                h1 to h6-- used for headings<br>
+                p-- used to disolay para <br>
+                images, audio, video-- used to diplay img,audio,video<br>
+                Section, Div& Anchor<br>
+                Table-- tr, td, th.<br>
+                Input-- type=text, date, time, month, year<br>
+                Button-- type= submit, reset, log-in,sign-up<br>
+                footer><br>
+                /footer>
+            <p>It shows on the bottom of the page</p>
+            /body<br>
+            /html<br>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

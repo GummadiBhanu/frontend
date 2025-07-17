@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns:2fr 2fr 2fr;
+      gap: 10px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      /* overflow-x: hidden; */
+    }
+
+    h2.page-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: auto auto auto ;
+      gap: 20px;
+    justify-content:space-evenly;
+      /*max-width: 1200px;
+      margin: auto;
+      overflow-x: hidden; */
+      width:100%;
+    }
+
+    .item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      width:250px;
+      /* height: 650px;
+      width: 350px; */
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+    }
+
+    .item h1 {
+      font-size: 1.4rem;
+      text-align: center;
+      color: #000;
+      font-weight: bold;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .item h1::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 4px;
+      margin: 10px auto 0;
+      background: linear-gradient(to right, orange, purple, blue);
+      border-radius: 10px;
+    }
+
+    .item p,
+    .item ul,
+    .item ol,
+    .item mark,
+    .item table {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .item ul,
+    .item ol {
+      margin-left: 20px;
+    }
+
+    mark {
+      background-color: #ffeaa7;
+      padding: 2px 4px;
+    }
+
+    table {
+      width: 250px;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      .item {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">
+      <h1>JS</h1>
+      <p>JS-Javascript</p>
+      <p>JavaScript is a high-level, interpreted programming language used to create dynamic, interactive behavior on
+        websites, such as form validation, animations, real-time updates, and user interactions.</p>
+      <h1>Types of Javascript</h1>
+      <ul>
+        <li>Client-side Script</li>
+        <li>Sever-side Script</li>
+
+      </ul>
+
+      <h1>Decleration of Variables</h1>
+      <ul>
+        <li>by using:--Let;</li>
+        <li>by using:--Const;</li>
+        <li>by using:--Var;</li>
+      </ul>
+      <p>!DOCTYPE html<br>
+        html lang="en"<br>
+        /html<br>
+    </div>
+
+    <div class="item">
+      <h1>JS written inside Script tag</h1>
+      <ul>
+        <li>JS is used to Make Web Pages Interactive--
+
+          Respond to clicks, keypresses, mouse movements, etc.</li>
+
+        <li>Update Content Without Reloading (AJAX)--
+
+          Change page content dynamically using fetch() or XMLHttpRequest.</li>
+
+        <li>Form Validation--
+
+          Check user inputs before submitting forms.</li>
+
+        <li>Control Multimedia
+
+          Play, pause, or adjust audio/video.</li>
+
+        <li>Create Games, Animations, and Effects
+
+          JavaScript handles canvas, game loops, and animations.</li>
+
+        <li>Build Web Applications (like Gmail, Google Docs)
+
+          JavaScript is core to frameworks like React, Angular, Vue..</li>
+      </ul>
+      <p>EX:--!DOCTYPE html<br>
+        html lang="en"<br>
+        head<br>
+        title> Document /title> <br>
+        /head<br>
+        script<br>
+        /script<br>
+        /html<br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Let--Variable</h1>
+      <p>let is a keyword in JavaScript used to declare block-scoped variables. Unlike var, it does not allow
+        redeclaration in the same scope and is safer to use in modern JavaScript.
+      <ul>
+        <li>Block Scope</li>
+        <li>Avoids Redeclaration</li>
+        <li>Supports Reassignment</li>
+        <li>Preferred in Loops</li>
+        <li>Preferred in Conditions</li>
+      </ul>
+      </p>
+      <p>Ex:-- 1.) let name = "JS";<br>
+        console.log(name); // Output: JS<br>
+        name = "Frontend Dev";<br>
+        console.log(name); // Output: Frontend Dev
+      </p>
+      <p>Ex:-- 2.)let in block scope:<br>
+        let x = 10;<br>
+        if (true) {<br>
+        let x = 20; // different x<br>
+        console.log(x); // Output: 20<br>
+        }<br>
+        console.log(x); // Output: 10</p>
+
+    </div>
+
+
+
+
+    <div class="item">
+      <h1>Const--Variable</h1>
+      <p>const is a keyword used to declare constants in JavaScript. These are variables whose value cannot be
+        reassigned after they are initialized.
+      <ul>
+        <li>Creates Block-Scoped Constants</li>
+        <li>No Reassignment Allowed</li>
+        <li>No Redecleration Allowed</li>
+        <li>Prevent Bugs by Locking Values</li>
+        <li>Works Well with Arrays and Objects</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      <p>EX:-- 1.) const pi = 3.14;<br>
+        console.log(pi); // Output: 3.14<br>
+
+        // pi = 3.1415; ❌ Error: Assignment to constant variable
+      </p>
+      <p>
+        const person = { name: "JS" };<br>
+        person.name = "Frontend Dev"; // ✅ You can change properties<br>
+        console.log(person.name); // Output: Frontend Dev<br>
+
+        // person = {}; ❌ Error: Cannot reassign the constant<br>
+
+      </p>
+      </p>
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8">
+        <title>var, let, const Example</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+          }
+
+          pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #333;
+          }
+        </style>
+      </head>
+
+      <body>
+
+        <h1>JavaScript Variable Examples</h1>
+
+        <h2>1. var example</h2>
+        <pre id="varExample"></pre>
+
+        <h2>2. let example</h2>
+        <pre id="letExample"></pre>
+
+        <h2>3. const example</h2>
+        <pre id="constExample"></pre>
+
+        <script>
+          // 1. var example
+          var name = "Bhanu";
+          varExample.innerText += "Initial var: " + name + "\n";
+
+          var name = "Frontend Dev"; // Redeclaration allowed
+          varExample.innerText += "Re-declared var: " + name + "\n";
+
+          function varTest() {
+            var x = 1;
+            if (true) {
+              var x = 2; // Same variable (function-scoped)
+              varExample.innerText += "Inside if block: " + x + "\n";
+            }
+            varExample.innerText += "Outside if block: " + x + "\n";
+          }
+          varTest();
+
+          // 2. let example
+          let age = 25;
+          letExample.innerText += "Initial let: " + age + "\n";
+
+          age = 30; // Reassignment allowed
+          letExample.innerText += "Updated let: " + age + "\n";
+
+          // let age = 35; ❌ Error: can't redeclare in same scope
+
+          function letTest() {
+            let y = 10;
+            if (true) {
+              let y = 20; // Block-scoped
+              letExample.innerText += "Inside if block: " + y + "\n";
+            }
+            letExample.innerText += "Outside if block: " + y + "\n";
+          }
+          letTest();
+
+          // 3. const example
+          const country = "India";
+          constExample.innerText += "const value: " + country + "\n";
+
+          // country = "USA"; ❌ Error: can't reassign
+
+          const user = {
+            name: "Bhanu",
+            role: "Student"
+          };
+          user.role = "Frontend Dev"; // Allowed: modifying object
+          constExample.innerText += "Updated user.role: " + user.role + "\n";
+
+          // user = {}; ❌ Error: can't reassign whole object
+        </script>
+
+      </body>
+
+      </html>
+
+    </div>
+
+
+
+
+    <div class="item">
+      <h1>Var--Variable</h1>
+      <p>var is a keyword in JavaScript used to declare function-scoped variables. It was the original way to declare
+        variables before let and const were introduced in ES6 (2015).
+      <ul>
+        <li>Function Scope</li>
+        <li>Globally Scoped if Declared Outside a Function</li>
+        <li>In Var--Can Be Redeclared</li>
+        <li>In Var--Can Be and Reassigned</li>
+        <li></li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <p>Ex:-- On Var-Variable
+        script><br>
+        var name = "JS";<br>
+        console.log(name); // Output: JS<br>
+
+        name = "Frontend Dev";<br>
+        console.log(name); // Output: Frontend Dev<br>
+
+        var name = "Full Stack Dev";<br>
+        console.log(name); // Output: Full Stack Dev<br>
+        /script><br>
+      </p>
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8">
+        <title>JavaScript var Example</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+          }
+
+          pre {
+            background: #f1f1f1;
+            padding: 10px;
+            border-left: 4px solid #333;
+            margin-bottom: 20px;
+          }
+        </style>
+      </head>
+
+      <body>
+        <h1>JavaScript <code>var</code> Full Example</h1>
+
+        <h2>Output</h2>
+        <pre id="output"></pre>
+
+        <script>
+          let output = document.getElementById("output");
+
+          // 1. Declaration and Initialization
+          var name = "Bhanu";
+          output.innerText += "Initial var: " + name + "\n";
+
+          // 2. Reassignment
+          name = "Frontend Developer";
+          output.innerText += "After reassignment: " + name + "\n";
+
+          // 3. Redeclaration
+          var name = "Full Stack Developer";
+          output.innerText += "After redeclaration: " + name + "\n";
+
+          // 4. Function Scope
+          function varScopeTest() {
+            var message = "Inside function";
+            output.innerText += "Inside function: " + message + "\n";
+          }
+          varScopeTest();
+
+          // Trying to access 'message' outside the function
+          try {
+            output.innerText += "Outside function: " + message + "\n";
+          } catch (e) {
+            output.innerText += "Outside function: Error - " + e.message + "\n";
+          }
+
+          // 5. Hoisting
+          output.innerText += "Hoisting test: " + hoistedVar + "\n";
+          var hoistedVar = "This is hoisted";
+          output.innerText += "After initialization: " + hoistedVar + "\n";
+
+          // 6. Inside a loop (No block scope)
+          for (var i = 0; i < 3; i++) {
+            output.innerText += "Inside loop i = " + i + "\n";
+          }
+          output.innerText += "Outside loop i = " + i + "\n"; // Still accessible
+        </script>
+      </body>
+      </html>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Operators</h1>
+      <p>In JavaScript, an operator is a symbol or keyword used to perform operations on variables, values, or
+        expressions.
+        Operators are used to assign values, compare values, perform arithmetic, combine logic, and more.</p>
+      <h3>Types of Operators in Javascript</h3>
+      <ul>
+        <li>Airthemetic operator</li>
+        <li>Relational operator</li>
+        <li>Logical operator</li>
+        <li>Assignment operator</li>
+        <li>Concatenation operator</li>
+        <li>Bitwise operator</li>
+        <li>Unary operator</li>
+        <li>Ternary operator</li>
+      </ul>
+      <h1>Airthemetic operator</h1>
+      <p>Arithmetic operators in JavaScript are symbols used to perform basic mathematical operations like addition,
+        subtraction, multiplication, division, and more on numeric values</p>
+      <table style="width:250px">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Use/Purpose</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <th>+ </th>
+          <th>Addition</th>
+          <th>Adds two numbers or concatenates strings</th>
+          <th>5 + 3 </th>
+          <th>8</th>
+        </tr>
+
+        <tr>
+          <th>-</th>
+          <th>subtraction</th>
+          <th>Subtracts the right value from the left </th>
+          <th>10-4</th>
+          <th>6</th>
+        </tr>
+
+        <tr>
+          <th>*</th>
+          <th>multiplication</th>
+          <th>Multiplies two numbers</th>
+          <th>6*2</th>
+          <th>12</th>
+        </tr>
+
+        <tr>
+          <th>/</th>
+          <th>Division</th>
+          <th>Divides the left number by the right</th>
+          <th>8/2</th>
+          <th>4</th>
+        </tr>
+
+        <tr>
+          <th>%</th>
+          <th>Modulus</th>
+          <th>Returns the remainder of division </th>
+          <th>9%4</th>
+          <th>1</th>
+        </tr>
+
+        <tr>
+          <th>++</th>
+          <th>increment</th>
+          <th>Increases a number by 1 </th>
+          <th>let x = 5; x++ </th>
+          <th>6</th>
+        </tr>
+
+        <tr>
+          <th>--</th>
+          <th>decrement</th>
+          <th>Decreases a number by 1 </th>
+          <th>let y = 3; y--</th>
+          <th>2</th>
+        </tr>
+
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+    <div class="item">
+      <h1>Relational operator</h1>
+      <p>Relational operators (also called comparison operators) are used to compare two values or expressions. They
+        return a Boolean value:</p>
+      <table style="width: 250px;">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Use/Purpose</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <th>==</th>
+          <th>Equal to</th>
+          <th>a == b</th>
+          <th>5 == '5'</th>
+          <th>true (loose)</th>
+        </tr>
+
+        <tr>
+          <th>===</th>
+          <th>strictly equal to</th>
+          <th>a===b</th>
+          <th>5 ==='5'</th>
+          <th>false</th>
+        </tr>
+
+        <tr>
+          <th>*</th>
+          <th>multiplication</th>
+          <th>Multiplies two numbers</th>
+          <th>6*2</th>
+          <th>12</th>
+        </tr>
+
+        <tr>
+          <th>!=</th>
+          <th>not equal to</th>
+          <th>a !=b</th>
+          <th>5 !== '5' </th>
+          <th>true</th>
+        </tr>
+
+        <tr>
+          <th>!== </th>
+          <th>Strictly not equal to</th>
+          <th>a !== b </th>
+          <th>5 !== '5'</th>
+          <th>true</th>
+        </tr>
+
+        <tr>
+          <th>></th>
+          <th>greater than</th>
+          <th>a>b</th>
+          <th>10>5</th>
+          <th>true</th>
+        </tr>
+
+        <tr>
+          <th>
+            < </th>
+          <th>less than</th>
+          <th>a< b </th>
+          <th>3 < 7 </th>
+          <th>true</th>
+        </tr>
+
+        <tr>
+          <th>>=</th>
+          <th>greater than or equal to</th>
+          <th>a>=b</th>
+          <th>10>5</th>
+          <th>true</th>
+        </tr>
+
+        <tr>
+          <th>
+            <= </th>
+          <th>less than or equal to</th>
+          <th>a<= b </th>
+          <th>4<=2 </th>
+          <th>false</th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <h1>logical operator</h1>
+      <p>Logical operators in JavaScript are used to combine or invert Boolean (true/false) values or expressions.
+        They are often used in conditional statements (like if, while, for) to make decisions based on multiple
+        conditions.
+      <table style="width: 250px;">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Syntax</th>
+          <th>Use/Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <th>&&</th>
+          <th>logical AND</th>
+          <th>cond1 && cond2 </th>
+          <th>true && false </th>
+          <th>false</th>
+        </tr>
+
+        <tr>
+          <th>` </th>
+          <th></th>
+          <th>` </th>
+          <th>logical OR</th>
+          <th>`cond1</th>
+        </tr>
+
+        <tr>
+          <th>!</th>
+          <th>logical NOT</th>
+          <th>!condition</th>
+          <th>!true</th>
+          <th>false</th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+
+    <div class="item">
+      <h1>Assignment operator</h1>
+      <p>An assignment operator in JavaScript is used to assign a value to a variable.
+        It can also perform operations like addition, subtraction, multiplication, etc., while assigning the result to
+        the same variable.</p>
+      <table style="width: 250px;">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Use/Purpose</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <th>=</th>
+          <th>Simple assignment </th>
+          <th>x = 10</th>
+          <th>Assigns 10 to x </th>
+          <th>x = 10</th>
+        </tr>
+
+        <tr>
+          <th>+=</th>
+          <th>Add and assign</th>
+          <th>x+ = 5</th>
+          <th>x = x + 5 </th>
+          <th>x = 15</th>
+        </tr>
+
+        <tr>
+          <th>-=</th>
+          <th>Subtract and assign</th>
+          <th>x- = 3</th>
+          <th>x = x - 3 </th>
+          <th>x = 7</th>
+        </tr>
+
+        <tr>
+          <th>*=</th>
+          <th>Multiply and assign</th>
+          <th>x* = </th>
+          <th>x = x * 2 </th>
+          <th>x = 20</th>
+        </tr>
+
+        <tr>
+          <th>/=</th>
+          <th>Divide and assign</th>
+          <th>x/ = 4</th>
+          <th>x = x / 4 </th>
+          <th>x = 2.5</th>
+        </tr>
+
+        <tr>
+          <th>%=</th>
+          <th>Modulo and assign</th>
+          <th>x% = 3</th>
+          <th>x = x % 4 </th>
+          <th>x = 1</th>
+        </tr>
+
+        <tr>
+          <th>**= </th>
+          <th>Exponentiation assign </th>
+          <th>x **= 2 </th>
+          <th>x = x ** 2 </th>
+          <th>x = 100</th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <h1>Concatenation operator</h1>
+      <p>In JavaScript, the concatenation operator (+) is used to join (combine) two or more strings into a single
+        string.
+      <table style="width: 250px;">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Syntax</th>
+          <th>Use/Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <th>+</th>
+          <th>String Concatenation</th>
+          <th>str1 + str2</th>
+          <th>"Hello" + " World" </th>
+          <th>"Hello World"</th>
+        </tr>
+
+        <tr>
+          <th>+==</th>
+          <th>Add and assign</th>
+          <th>str1 += str2 </th>
+          <th>let msg = "Hi "; msg += "there"</th>
+          <th>"Hi there"</th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+    <div class="item">
+      <h1>Bitwise operator</h1>
+      <p>Bitwise operators in JavaScript perform operations on binary representations of numbers.
+        They treat numbers as 32-bit integers and compare/manipulate the individual bits (0s and 1s).</p>
+      <table style="width: 250px;">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Use/Purpose</th>
+          <th>Example</th>
+          <th>Result (Binary) </th>
+          <th>Decimal Result</th>
+        </tr>
+
+        <tr>
+          <th>&</th>
+          <th>AND</th>
+          <th>a & b</th>
+          <th>5 & 3</th>
+          <th>0101 & 0011 → 0001 </th>
+          <th>1</th>
+        </tr>
+
+        <tr>
+          <th>`</th>
+          <th>`</th>
+          <th> OR </th>
+          <th>` a</th>
+          <th>b` </th>
+          <th>`5</th>
+        </tr>
+
+        <tr>
+          <th> ^ </th>
+          <th>XOR (exclusive OR)</th>
+          <th>a ^ b</th>
+          <th>5 ^ 3</th>
+          <th>0101 ^ 0011 → 0001 </th>
+          <th>6</th>
+        </tr>
+
+        <tr>
+          <th> ~ </th>
+          <th>NOT (inverts bits)</th>
+          <th> ~a </th>
+          <th> ~5 </th>
+          <th>~0000...0101 → 1111...1010 </th>
+          <th>-6</th>
+        </tr>
+
+        <tr>
+          <th>
+            << </th>
+          <th> Left Shift </th>
+          <th> a << b </th>
+          <th> 5 << 1 </th>
+          <th>0101 << 1 → 1010 </th>
+          <th>10</th>
+        </tr>
+
+        <tr>
+          <th> >> </th>
+          <th> Right Shift (sign-preserving) </th>
+          <th> a >> b </th>
+          <th> 5 >> 1 </th>
+          <th>0101 >> 1 → 0010 </th>
+          <th>2</th>
+        </tr>
+
+        <tr>
+          <th> >>> </th>
+          <th> Unsigned Right Shift </th>
+          <th> a >>> b </th>
+          <th> -5 >>> 1 </th>
+          <th>Special case </th>
+          <th>Large positive int</th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <h1>Unary operator</h1>
+      <p>A unary operator is an operator that works with only one operand.
+        It performs operations like type conversion, negation, increment/decrement, and logical NOT.
+
+      <table style="width: 250px;">
+        <tr>
+          <th>Opearator</th>
+          <th>Name</th>
+          <th>Syntax</th>
+          <th>Use/Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <th>+</th>
+          <th> Unary plus </th>
+          <th> +a </th>
+          <th> +("10") </th>
+          <th> 10 (string to number) </th>
+        </tr>
+
+        <tr>
+          <th>-</th>
+          <th> Unary minus </th>
+          <th> -a </th>
+          <th> -5 </th>
+          <th> -5 </th>
+        </tr>
+
+        <tr>
+          <th>++</th>
+          <th> Increment </th>
+          <th> ++a / a++ </th>
+          <th> let x = 1; ++x </th>
+          <th> 2 </th>
+        </tr>
+
+        <tr>
+          <th>--</th>
+          <th> Decrement </th>
+          <th> --a / a-- </th>
+          <th> let y = 5; y-- </th>
+          <th> 4 </th>
+        </tr>
+
+        <tr>
+          <th>!</th>
+          <th> logical NOT </th>
+          <th> !a </th>
+          <th> !true </th>
+          <th> false </th>
+        </tr>
+
+        <tr>
+          <th> type of </th>
+          <th> Type operator </th>
+          <th> type of a </th>
+          <th> type of "hello" </th>
+          <th> "string" </th>
+        </tr>
+
+        <tr>
+          <th> delete </th>
+          <th> dekete property </th>
+          <th> delete obj.key </th>
+          <th> Removes property </th>
+          <th> true(or)false </th>
+        </tr>
+
+        <tr>
+          <th> void </th>
+          <th> Discards return value </th>
+          <th> void(expression) </th>
+          <th> void 0 </th>
+          <th> undefined </th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Ternary operator</h1>
+      <p>The ternary operator in JavaScript is a short-hand conditional operator that evaluates a condition and returns
+        one of two values based on whether the condition is true or false.</p>
+      <table style="width:100%">
+        <tr>
+          <th>Syntax Pattern</th>
+          <th>Meaning</th>
+          <th> Example</th>
+          <th>Output</th>
+        </tr>
+
+        <tr>
+          <th>a > b ? x : y </th>
+          <th>If a > b, return x, else return y</th>
+          <th> 5 > 3 ? "Yes" : "No"</th>
+          <th>"Yes"</th>
+        </tr>
+
+        <tr>
+          <th>condition ? trueValue : falseValue </th>
+          <th>General format </th>
+          <th> age >= 18 ? "Adult" : "Minor" </th>
+          <th>"Adult"</th>
+        </tr>
+
+        <tr>
+          <th>isLoggedIn ? name : "Guest" </th>
+          <th>Show name if logged in, else "Guest" </th>
+          <th>true ? "John" : "Guest" </th>
+          <th>"John"</th>
+        </tr>
+
+        <tr>
+          <th>score >= 40 ? "Pass" : "Fail" </th>
+          <th>Check if score is passing </th>
+          <th>35 >= 40 ? "Pass" : "Fail" </th>
+          <th>"Fail"</th>
+        </tr>
+
+        <tr>
+          <th>x ? "Exists" : "Missing" </th>
+          <th>Check if variable is truthy </th>
+          <th>x = 0 → 0 ? "Exists" : "Missing"</th>
+          <th>"Missing"</th>
+        </tr>
+
+        <tr>
+          <th>value === 10 ? "Ten" : value === 20 ? "Twenty" : "Other" </th>
+          <th>Nesting ternaries </th>
+          <th>value = 20 → Output: "Twenty" </th>
+          <th></th>
+        </tr>
+      </table>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+
+    <div class="item">
+      <h1>Control-Statements in JS</h1>
+      <p>In JavaScript, the if statement is used to execute a block of code only if a specified condition is true. It
+        adds logic and decision-making to your code.</p>
+      <h3>Types of Control Statements In Javascript</h3>
+      <ul>
+        <li>If-Statement</li>
+        <li>If...else--Statement</li>
+        <li> if...else if...else--Statement</li>
+      </ul>
+      <h1>if-Statement</h1>
+      <p>📌Syntax:- if-statement<br>
+        let temperature = 35;<br>
+        if (temperature > 30) {<br>
+        console.log("It's hot outside.");<br>
+        }</p>
+      <p>An if statement in JavaScript is a conditional statement used to execute a block of code only when a specific
+        condition is true. It allows you to add decision-making logic to your programs.
+      <ul>
+        <li>Control the flow of execution
+
+          Run certain code only when a condition is met.</li>
+
+        <li>Add interactivity and logic
+
+          Respond to user inputs, data values, or system states.</li>
+
+        <li>Validate input values
+
+          Example: Check if a form is filled correctly.</li>
+
+        <li>Build dynamic content
+
+          Show/hide elements, enable/disable buttons, etc.</li>
+
+        <li>Error handling or edge cases
+
+          Detect and act when something is wrong.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>If...else--Statement</h1>
+      <p>📌Syntax:- if...else-statement<br>
+        if (condition) {<br>
+        // Code runs if condition is true<br>
+        }<br>
+        else
+        <br>
+        {<br>
+        // Code runs if condition is false<br>
+        }
+      </p>
+      <p>The if...else statement in JavaScript is used to execute one block of code if a condition is true, and
+        another
+        block if the condition is false.
+      <ul>
+        <li>Decision making with two outcomes
+
+          Choose between two different code blocks.</li>
+
+        <li>Input validation
+
+          Example: Check if a field is empty or filled.</li>
+
+        <li>User interaction
+
+          Respond based on user actions (e.g., login success or fail).</li>
+
+        <li>Conditional UI rendering
+
+          Show or hide elements based on logic.</li>
+
+        <li>Basic game or quiz logic
+
+          Example: Check if answer is right or wrong..</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br> 
+      </p>
+
+    </div>
+
+
+
+
+
+    <div class="item">
+      <h1>if...else if--Statement</h1>
+      <p>📌 Syntax:- if...else if-statement<br>
+        if (condition1) {<br>
+        // Runs if condition1 is true<br>
+        }<br> else if (condition2)<br>
+        {<br>
+        // Runs if condition2 is true
+        } else {
+        // Runs if none of the above conditions are true
+        }</p>
+      <p>The if...else if statement in JavaScript is used to test multiple conditions one by one, and execute the
+        first
+        block whose condition is true.
+      <ul>
+        <li>Multiple condition checks
+
+          Choose between more than two options.</li>
+
+        <li>Grading systems
+
+          Check ranges like 90+, 75–89, etc.</li>
+
+        <li>User input validation
+
+          Handle several input cases (e.g., age groups).</li>
+
+        <li>Menus and options
+
+          Perform actions based on user choice.</li>
+
+        <li>Form feedback and UI control
+
+          Display different messages or behavior based on logic..</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+
+    <div class="item">
+      <h1>Looping-Statements in JS</h1>
+      <p>Looping statements in JavaScript are used to execute a block of code repeatedly as long as a specified
+        condition is true.</p>
+      <h3>Types of Looping Statements In Javascript</h3>
+      <ul>
+        <li>for-Loop</li>
+        <li>while-Loop</li>
+        <li>do-while Loop</li>
+      </ul>
+      <h1>for-Loop</h1>
+      <p>A for loop in JavaScript is a looping statement used to repeat a block of code a specific number of times.
+      <ul>
+        <li> Repeating Tasks
+
+          Example: Printing numbers from 1 to 100.</li>
+
+        <li>Working with Arrays
+
+          Loop through array elements.</li>
+        <li>Executing Logic a Set Number of Times
+
+          Example: Running a game for 3 rounds.</li>
+
+        <li>Creating HTML Elements Dynamically
+
+          Example: Generating multiple divs or list items.</li>
+
+        <li>Automated Calculations
+
+          Example: Summing numbers, finding average, etc.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+
+    <div class="item">
+      <h1>while-Loop</h1>
+      <p>The while loop in JavaScript is used to execute a block of code repeatedly as long as the given condition is
+        true.
+      <ul>
+        <li>Run code until a condition changes
+
+          Example: Keep asking for user input until it's valid.</li>
+
+        <li>Waiting for an event or signal
+
+          Continuously check a value until it's updated.</li>
+
+        <li>Reading input until EOF or end condition
+
+          Example: Read lines from a file or stream.</li>
+
+        <li>When you don't know how many times to loop
+
+          Example: Loop until a randomly generated number matches a target.</li>
+
+        <li>Simpler alternative to for when only condition matters
+
+          Clean structure if initialization and increment are handled separately...</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>do-while Loop</h1>
+      <p>The do...while loop in JavaScript is a control statement that executes a block of code at least once, and
+        then
+        repeats it as long as the specified condition is true.
+      <ul>
+        <li>Run code at least once before checking the condition
+
+          Ideal when you need to show something once, even if the condition is false.</li>
+
+        <li>User input validation
+
+          Keep asking until valid input is entered (but ask at least once).</li>
+
+        <li>Menus and interactive prompts
+
+          Display options once, then repeat if user wants.</li>
+
+        <li>Games and retry logic
+
+          Run game round at least once, and repeat based on user decision.</li>
+
+        <li>Useful when condition depends on loop body
+
+          Example: Condition becomes false only after processing inside the loop.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Advanced Looping-Statements in JS</h1>
+      <p>Advanced looping statements in JavaScript refer to loops designed to simplify the iteration of complex data
+        structures, such as objects, arrays, strings, and other iterables.</p>
+      <h3>Types of Advanced Looping Statements In Javascript</h3>
+      <ul>
+        <li>for...in</li>
+        <li>for...of</li>
+      </ul>
+      <h1>for...in</h1>
+      <p>📌 Syntax:- for...in<br>
+        for (let key in object) {<br>
+        // Code to execute for each key<br>
+        }</p>
+      <p>The for...in loop in JavaScript is used to iterate over the enumerable properties (keys) of an object.
+      <ul>
+        <li>Access all properties of an object
+
+          Loop through keys to get values using object[key].</li>
+
+        <li>Display object data
+
+          Show all property-value pairs.</li>
+
+        <li>Modify object values dynamically
+
+          Example: Convert all string values to uppercase.</li>
+
+        <li>Debugging
+
+          Print all keys and values to inspect the object.</li>
+
+        <li>Used in form handling and data validation
+
+          Loop through form input objects to check if fields are filled..</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+
+      <p>⚠️ Note:
+        Avoid using for...in on arrays — it iterates over indexes as strings and may include inherited properties.</p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>for...off</h1>
+      <p>📌 Syntax:- for...of<br>
+        for (let value of iterable) {<br>
+        // Code to run for each value<br>
+        }
+      </p>
+      <p>The for...of loop in JavaScript is used to iterate over the values of an iterable object, such as arrays,
+        strings, sets, maps, etc.
+      <ul>
+        <li>Loop through arrays easily
+
+          Directly get array values without using index.</li>
+
+        <li>Loop through strings
+
+          Access each character in a string.</li>
+
+        <li>Work with sets and maps
+
+          Access values in Set and keys/values in Map.</li>
+
+        <li>Cleaner alternative to traditional for
+
+          No need to handle index or length manually.</li>
+
+        <li>Used in async functions with for await...of
+
+          Iterate over async iterables like API responses..</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <p>⚠️ Note:
+        for...of cannot be used directly on plain objects.
+        Use Object.values() or Object.entries() instead.</p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Funtions in JS</h1>
+      <p>A function in JavaScript is a block of reusable code that performs a specific task.
+        Functions help organize code, make it modular, and reduce repetition.</p>
+      <h3>Types of Funtions In Javascript</h3>
+      <ul>
+        <li>Named Function</li>
+        <li>Anonymous Function</li>
+        <li>Arrow Function</li>
+        <li>Function Expression</li>
+        <li>IIFE</li>
+        <li>Constructor Function</li>
+        <li>Generator Function</li>
+        <li>Async Function</li>
+        <li>Hosting Function</li>
+      </ul>
+      <h1>Named Functions</h1>
+      <p>A named function in JavaScript is a function that has a specific identifier (name).
+        It is declared using the function keyword followed by the function name.
+      <p>📌 Syntax:-named functions<br>
+        function functionName(parameters) {<br>
+        // code block<br>
+        return value;<br>
+        }</p>
+      <ul>
+        <li>Name--Required</li>
+        <li>Reusability High</li>
+        <li>Debugging Easy, name appears in logs</li>
+        <li>Recursion ✅ Supported</li>
+        <li>Hoisting ✅ Yes (declared at compile time)</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Anonymous function</h1>
+      <p>An anonymous function is a function without a name.
+        It is often assigned to a variable or used as an argument to another function.
+      <p>📌 Syntax:<br>
+        javascript
+        Copy
+        Edit
+        const greet = function(name) {<br>
+        return "Hello, " + name;<br>
+        };<br>
+
+        console.log(greet("Alice")); // Output: Hello, Alice</p>
+      <ul>
+        <li>Function Expressions Store a function in a variable for reuse.</li>
+        <li>Callbacks Pass functions as arguments (e.g. to setTimeout, .map()).</li>
+        <li>Event Handlers Define inline behavior for user actions.</li>
+        <li>Encapsulation Useful in closures to limit scope.</li>
+        <li>Short-Term Logic Write quick one-time-use logic.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <h1>Arrow function</h1>
+      <p>An arrow function is a shorter way to write function expressions in JavaScript, introduced in ES6 (ECMAScript
+        2015).
+      <p>📌 Syntax:-arrow function <br>
+        const add = (a, b) => a + b;</p>
+      <ul>
+        <li>Shorter Syntax Great for writing concise functions.</li>
+        <li>Array Methods Perfect for .map(), .filter(), .reduce().</li>
+        <li>Callbacks Cleaner for use in setTimeout, addEventListener, etc.</li>
+        <li>Lexical this Binding Useful in classes and nested functions (does not change this).</li>
+        <li>Functional Programming Works well in chaining and functional style code.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+
+
+    <div class="item">
+      <h1>functional Expressions</h1>
+      <p>A function expression is a way to define a function inside an expression (e.g., by assigning it to a
+        variable).
+      <p>📌 Syntax:-functional Expressions<br>
+        const add = function(a, b) {<br>
+        return a + b;<br>
+        };<br>
+        console.log(add(2, 3)); // Output: 5</p>
+      <ul>
+        <li>Storing functions in variables Assign reusable logic to a variable.</li>
+        <li>Passing as arguments Useful for callbacks in array methods or events.</li>
+        <li>Not hoisted Makes code more predictable and safer in order.</li>
+        <li>Recursion (Named only) Named expressions can call themselves.</li>
+        <li>Closures Easily define functions inside other functions..</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <hr>
+      <h1>Hosting function</h1>
+      <p>Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their scope
+        (memory phase) before code execution.
+      <p>📌greet(); // ✅ Works due to hoisting<br>
+        function greet() {<br>
+        console.log("Hello!");<br>
+        }</p>
+      <ul>
+        <li>Call functions before their declaration.</li>
+        <li>Improves code readability.</li>
+        <li>Separates logic and definitions.</li>
+        <li>Supports top-down programming.</li>
+        <li>Simplifies debugging.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+
+
+    <div class="item">
+      <h1> Immediately Invoked Function Expression (IIFE)</h1>
+      <p>An IIFE (Immediately Invoked Function Expression) is a function in JavaScript that is defined and executed
+        immediately after its creation.
+      <p>📌 Syntax:-Immediately Invoked Function Expression (IIFE)
+        (function() {<br>
+        // Code inside the IIFE<br>
+        console.log("IIFE executed!");<br>
+        })();<br><br>
+        OR with arrow function:<br>
+        (() => {<br>
+        console.log("Arrow IIFE executed!");<br>
+        })();</p>
+      <ul>
+        <li>Create private scope Variables inside IIFE cannot be accessed from outside.</li>
+        <li>Avoid global variables Helps prevent conflicts in large codebases.</li>
+        <li>Run code once immediately Useful for setup or initialization code.</li>
+        <li>Execute async logic quickly Great for modules or config loading.</li>
+        <li>Used in Module Pattern Basis for older JavaScript modular design before ES6.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <hr>
+      <h1>Constructor Function</h1>
+      <p>A constructor function in JavaScript is a special type of function used to create and initialize objects.
+        It is called using the new keyword, which automatically sets up the context (this) and returns a new object.
+      <p>📌 Syntax:- Constuctor Function<br>
+        function Person(name, age) {<br>
+        this.name = name;<br>
+        this.age = age;<br>
+        }<br>
+        let user1 = new Person("Alice", 25);<br>
+        console.log(user1.name); // Output: Alice</p>
+      <ul>
+        <li>Creating multiple objects- Acts like a class to build many similar objects.</li>
+        <li>Initializing object properties- Set default values for each object.</li>
+        <li>Adding methods to objects- Define behavior using this.method.</li>
+        <li>Prototypes and inheritance- Extend behavior using .prototype.</li>
+        <li>Code reusability- Avoid repeating the same structure for each object manually.</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+
+
+
+    <div class="item">
+      <h1>Generator Funtion</h1>
+      <p>A Generator Function in JavaScript is a special type of function that can be paused and resumed during
+        execution.</p>
+      <p>📌Syntax:- Generator
+        Functions
+        function* generatorName() {<br>
+        yield value1;<br>
+        yield value2;<br>
+        // more yields<br>
+        }</p>
+      <ul>
+        <li>Lazy Evaluation Generate values only when needed, saving memory.</li>
+        <li>Custom Iterators Build your own iterator logic for looping.</li>
+        <li>Pause and Resume Execution Temporarily suspend and resume logic at different points.</li>
+        <li>Infinite Data Streams Useful for APIs, counters, or paginated data.</li>
+        <li>Asynchronous Programming Can work with async/await (when combined with yield and Promises).</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        meta charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+      <hr>
+      <h1>Async Function</h1>
+      <p>An async function in JavaScript is a function that always returns a Promise, and allows the use of the await
+        keyword inside it.</p>
+      <p>📌 Syntax:- Async Function<br>
+        function* generatorName() {<br>
+        yield value1;<br>
+        yield value2;<br>
+        // more yields<br>
+        }</p>
+      <ul>
+        <li>
+        <li>Lazy Evaluation Generate values only when needed, saving memory.</li>
+        <li>Custom Iterators Build your own iterator logic for looping.</li>
+        <li>Pause and Resume Execution Temporarily suspend and resume logic at different points.</li>
+        <li>Infinite Data Streams Useful for APIs, counters, or paginated data.</li>
+        <li>Asynchronous Programming Can work with async/await (when combined with yield and Promises).</li>
+      </ul>
+      </p>
+      <p>EX:-- !DOCTYPE html><br>
+        html lang="en"><br>
+        head><br>
+        met a charset="UTF-8"><br>
+        meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+        title><br>
+        style><br>
+        /style><br>
+        /title><br>
+        /head><br>
+        body><br>
+        script><br>
+        /script><br>
+        /body><br>
+        /html><br>
+      </p>
+    </div>
+</body>
+</html>
